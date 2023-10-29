@@ -38,12 +38,6 @@ export const Lang: Grammar<Tokens> = {
         ],
       ],
     },
-    negative_coordinate: {
-      options: [
-        [/[-]/, 'integer_constant'],
-        [/[-]/, 'floating_point_constant'],
-      ],
-    },
     comma_wsp: {
       options: [
         [
