@@ -6,7 +6,8 @@
   "author": "Ryan Graff",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "jest"
   },
   "devDependencies": {
     "@types/jest": "^29.5.6",
