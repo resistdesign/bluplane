@@ -5,7 +5,6 @@ export type Tokens =
   | 'layout_identifier'
   | 'class_style_identifier'
   | 'number'
-  | 'negative_coordinate'
   | 'comma_wsp'
   | 'comma'
   | 'integer_constant'
