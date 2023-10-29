@@ -1,5 +1,6 @@
 {
   "name": "bluplane",
+  "description": "A language for layouts.",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Ryan Graff",
