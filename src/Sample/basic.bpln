@@ -1,0 +1,7 @@
+main
+    "header header header" 1fr
+    "panel body" 5fr
+    "footer footer footer" 1fr
+
+.footer
+    background-color: red
