@@ -8,9 +8,10 @@ A language for layouts.
 # The basic document
 
 main
-    "header header header" 1fr
+    "header header" 1fr
     "panel body" 5fr
-    "footer footer footer" 1fr
+    "footer footer" 1fr
+    / 1fr 5fr
 
 .main
     background-color: blue
