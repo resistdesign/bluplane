@@ -1,0 +1,16 @@
+{
+  "name": "bluplane",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ryan Graff",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "bnfdx": "^1.1.0"
+  }
+}
