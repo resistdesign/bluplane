@@ -2,8 +2,17 @@ import { Grammar, TokenProcessorOptionTypes } from 'bnfdx';
 
 export type Tokens =
   | 'document'
+  | 'layout'
   | 'layout_identifier'
+  | 'layout_body'
+  | 'layout_area_row'
+  | 'layout_area_row_area_section'
+  | 'layout_area_row_area_name'
+  | 'layout_area_row_height'
+  | 'layout_column_width_row'
+  | 'class_style'
   | 'class_style_identifier'
+  | 'class_style_body'
   | 'number'
   | 'comma_wsp'
   | 'comma'
@@ -20,13 +29,54 @@ export const Lang: Grammar<Tokens> = {
   entry: 'document',
   map: {
     document: {
-      options: [/h/gim],
+      options: [
+        [
+          {
+            value: 'layout',
+            option: TokenProcessorOptionTypes.ZERO_OR_MORE,
+          },
+          {
+            value: 'document',
+            option: TokenProcessorOptionTypes.ZERO_OR_MORE,
+          },
+        ],
+        [
+          {
+            value: 'class_style',
+            option: TokenProcessorOptionTypes.ZERO_OR_MORE,
+          },
+          {
+            value: 'document',
+            option: TokenProcessorOptionTypes.ZERO_OR_MORE,
+          },
+        ],
+      ],
+    },
+    layout: {
+      options: [[]],
     },
     layout_identifier: {
-      options: [/h/gim],
+      options: [/[-A-Za-z0-9]/gim],
+    },
+    layout_body: {
+      options: [[]],
+    },
+    // TODO: Implement these:
+    layout_area_row: {},
+    layout_area_row_area_section: {},
+    layout_area_row_area_name: {},
+    layout_area_row_height: {},
+    layout_column_width_row: {},
+    class_style: {
+      // TODO: Implement.
+      options: [[]],
     },
     class_style_identifier: {
-      options: [/h/gim],
+      options: [/[-A-Za-z0-9]/gim],
+    },
+    class_style_body: {
+      // TODO: Implement.
+      options: [[]],
     },
     number: {
       options: [
