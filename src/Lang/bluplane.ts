@@ -25,6 +25,8 @@ export type Tokens =
   | 'digit'
   | 'wsp';
 
+// TODO: Use CSS bnf to define the CSS body blocks!
+
 export const Lang: Grammar<Tokens> = {
   entry: 'document',
   map: {
