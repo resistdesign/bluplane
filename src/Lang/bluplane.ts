@@ -72,7 +72,7 @@ export const Lang: Grammar<Tokens> = {
       options: [[]],
     },
     class_style_identifier: {
-      options: [/[-A-Za-z0-9]/gim],
+      options: [/\.[-A-Za-z0-9]/gim],
     },
     class_style_body: {
       // TODO: Implement.
